@@ -21,4 +21,10 @@ class HelloNear {
     near.log(`Saving greeting ${message}`);
     this.message = message;
   }
+
+  @call({}) // This method changes the state, for which it cost gas
+  make_offer({ product, id_offer, propose }: { product: object, id_offer: string, propose: object }): void {
+    near.log(`Saving greeting ${id_offer}`);
+  }
+
 }
