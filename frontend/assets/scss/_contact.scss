@@ -1,0 +1,188 @@
+/*-------- 30. Contact style ---------*/
+
+.contact-form-area {   
+    input , textarea  , select {
+        height: 62px;
+        background-color: transparent;
+        border: 1px solid #D8D8D8;      
+        padding: 2px 23px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        @media #{$md-layout} {
+            height: 52px;   
+        }
+        @media #{$xs-layout} {
+            height: 50px;
+        }
+        &::-webkit-input-placeholder {
+            color: #5d5d5d;
+            opacity: 1;
+        }
+    }
+    textarea { 
+        padding: 20px 20px;
+        height: 150px;
+        @media #{$md-layout} {
+            height: 160px
+        }
+        @media #{$xs-layout} {
+            height: 120px
+        }
+    }
+    select { 
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>");
+        background-size: 9px 6px;
+        background-position: right -10px center;
+        background-origin: content-box;
+        background-repeat: no-repeat;
+        max-width: 100%;
+    }
+    button {
+        &.submit {
+            background-color: var(--colormain);
+            border: 1px solid var(--colormain);
+            color: var(--white);          
+            padding: 14px 45px 14px;          
+            transition: all .4s;
+            text-transform: uppercase;
+            width: 100%;
+            &:hover {
+                background-color: var(--white);
+                color: var(--colormain);
+                border: 1px solid var(--colormain);
+            }
+        }
+    }
+}
+.contact-us-area{  
+    .section-title{
+        margin-bottom: 20px;      
+        .headline{
+            justify-content: flex-start;
+        }
+        h2 {
+            padding: 0;
+            text-align: left;
+        } 
+    }  
+    .contact-info-area{
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px; 
+        @media #{$xs-layout} {             
+            display: block;
+        }
+        .info-box-icon{
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+            @media #{$xs-layout} {             
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+            .icon{
+                padding: 20px;
+                margin-right: 20px;
+                border: 1px solid var(--colormain);
+                @media #{$xs-layout} {
+                    padding: 15px;                  
+                }
+                i{
+                    font-size: 35px; 
+                    color:var(--black); 
+                    @media #{$xs-layout} {
+                        font-size: 28px;                         
+                    }
+                    &:hover{
+                        color:var(--colormain); 
+                    }
+                }               
+            }
+            .box-body{
+                .info-box-title{
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    margin-bottom: 5px;
+                    color:var(--black); 
+                    @media #{$lg-layout} {
+                        font-size: 18px;
+                        text-transform: capitalize;        
+                    }
+                    @media #{$xs-layout} {
+                        font-size: 16px;                         
+                    }
+                }
+            }
+        }
+    }  
+    .contact-info-bottom {
+        border-top: 1px solid rgba(119,119,119,0.2);       
+        padding-top: 30px;  
+        @media #{$md-layout} {
+            margin-bottom: 30px;    
+        }
+        @media #{$xs-layout} {
+            margin-bottom: 30px;    
+        }
+        .profile-icon{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h4{
+                font-size: 20px;
+                text-transform: uppercase;
+                margin-bottom: 0;
+                color: var(--black);
+                @media #{$lg-layout} {
+                    font-size: 18px;                       
+                }
+                @media #{$xs-layout} {
+                    font-size: 16px;                         
+                }
+            }
+            ul{
+                display: flex;
+                li{
+                    margin-right: 5px;
+                    a{
+                        display: inline-block;
+                        text-align: center;
+                        text-decoration: none;                     
+                        width: 40px;
+                        height: 40px;
+                        line-height: 40px;
+                        z-index: 1;
+                        position: relative;
+                        overflow: hidden;                      
+                        border: 1px solid var(--colormain);
+                        color: var(--colormain);
+                        background-color: var(--white);
+                        transition: all .4s;
+                        &:hover{
+                            color:  var(--white);
+                            background-color: var(--colormain);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .google-map{
+        display: flex;
+        iframe{
+            width: 100%;
+        }
+    }
+}
+
+#contact-map {
+    height: 300px;
+}
+
+/*--- kitchen ---*/
+
+
+
+

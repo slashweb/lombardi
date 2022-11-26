@@ -1,91 +1,1369 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="assets/favicon.ico"/>
-  <link rel="apple-touch-icon" href="assets/favicon.ico"/>
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> -->
-  <title>Welcome to NEAR</title>
-  <link rel="stylesheet" href="assets/global.css">
-</head>
-<body>
-  <main id="signed-out-flow" style="display: none">
-    <h1>
-      The contract says: <span class="greeting" data-behavior="greeting"></span>
-    </h1>
-    <h3>
-      Welcome to NEAR!
-    </h3>
-    <p>
-      Your contract is storing a greeting message in the NEAR blockchain. To
-      change it you need to sign in using the NEAR Wallet. It is very simple,
-      just use the button below.
-    </p>
-    <p>
-      Do not worry, this app runs in the test network ("testnet"). It works
-      just like the main network ("mainnet"), but using NEAR Tokens that are
-      only for testing!
-    </p>
-    <p style="text-align: center; margin-top: 2.5em">
-      <button id="sign-in-button">Sign in with NEAR Wallet</button>
-    </p>
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Orange - Multipurpose eCommerce HTML Template</title>
+        <meta name="robots" content="noindex, follow" />
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
 
-  </main>
+        <!-- All CSS is here
+            ============================================ -->
 
-  <div id="signed-in-flow" style="display: none">
-    <button style="float: right" id="sign-out-button">
-      Sign out <span data-behavior="account-id"></span>
-    </button>
-    <main>
-      <h1>
-        The contract says: <span class="greeting" data-behavior="greeting"></span>
-      </h1>
-      <form class="change">
-        <label for="greeting">Change greeting:</label>
-        <div>
-          <input
-                  autocomplete="off"
-                  id="greeting"
-                  data-behavior="greeting"
-          />
-          <button>
-            <span>Save</span>
-            <div class="loader"></div>
-          </button>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+        <!-- Icon Font CSS -->
+        <link rel="stylesheet" href="assets/css/vendor/font-awesome.css">
+        <link rel="stylesheet" href="assets/css/vendor/linearicons.css">
+        <link rel="stylesheet" href="assets/css/vendor/LineIcons.css">
+        <link rel="stylesheet" href="assets/css/vendor/themify-icons.css">
+        <!-- Others CSS -->
+        <link rel="stylesheet" href="assets/css/plugins/owl-carousel.css">
+        <link rel="stylesheet" href="assets/css/plugins/slick.css">
+        <link rel="stylesheet" href="assets/css/plugins/animate.css">
+        <link rel="stylesheet" href="assets/css/plugins/jquery.mb.ytplayer.min.css">
+        <link rel="stylesheet" href="assets/css/plugins/magnific-popup.css">
+        <link rel="stylesheet" href="assets/css/plugins/jarallax.css">
+        <link rel="stylesheet" href="assets/css/plugins/jquery-ui.css">
+        <link rel="stylesheet" href="assets/css/plugins/easyzoom.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+    </head>
+
+    <body class="body-bg home">
+        <div class="main-wrapper">
+            <header class="header-area header-bicycle position-relative">
+                <div class="header-large-device">                 
+                    <div class="header-middle section-padding-2">
+                        <div class="container-fluid">
+                            <div class="header-ptb">
+                                <div class="row align-items-center">
+                                    <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="logo logo-res-lg">
+                                            <a href="index.html">
+                                                <img src="assets/images/logo/logo.png" alt="logo">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-9 col-lg-8 col-md-4 col-sm-3 col-xs-3">
+                                        <div class="main-menu menu-lh-1 main-menu-padding-1 menu-text-white d-flex align-items-center justify-content-end">
+                                            <nav>
+                                                <ul>
+                                                    <li><a class="active" href="index.html">Home</a>
+                                                        
+                                                    </li> 
+
+                                                    <li><a  href="shop-sidebar.html">Shop</a>
+                                                       
+                                                    </li>                                              
+                                                  
+                                                    <li><a  href="login-register.html">Login</a>
+                                                       
+                                                    </li>
+                                                    <li><a href="empenar.html">Empeñar</a></li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-1 col-lg-2 col-md-8 col-sm-9 col-xs-9">
+                                        <div class="header-right-wrap header-right-flex">                                                                                                                 
+                                            <div class="same-style same-style-mrg-dec">
+                                                <a class="cart-active" href="cart.html"><i class="fa fa-shopping-bag"></i>                                                   
+                                                    <div id="stickycartcount" class="stickycartcount">
+                                                        <div class="cart-count">
+                                                            <span class="cart-products-count">0</span>
+                                                        </div>                                             
+                                                    </div>                                                   
+                                                </a>                                               
+                                            </div>  
+                                            <bdi><span class="Price-currencySymbol">$</span>0.00</bdi>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                  
+                </div>
+                <div class="header-small-device">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-6">
+                                <div class="mobile-logo mobile-logo-width">
+                                    <a href="index.html">
+                                        <img alt="" src="assets/images/logo/logo.png">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="header-right-wrap header-right-flex">                                  
+                                    <div class="same-style">
+                                        <a href="wishlist.html"><i class="lni lni-heart"></i></a>
+                                    </div>
+                                    <div class="same-style">
+                                        <a class="cart-active" href="cart.html"><i class="fa fa-shopping-bag"></i></a>
+                                    </div>
+                                    <div class="same-style">
+                                        <a class="mobile-menu-button-active" href="#"><i class="lni lni-menu"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="category-menu-wrap bg-main">
+                                    <h3><a class="showcat" href="#"><i class="lnr lnr-menu"></i> All Categories </a></h3>
+                                    <div class="category-menu mobile-category-menu hidecat">
+                                        <nav>
+                                            <ul>
+                                                <li class="cr-dropdown"><a href="#"><i class="ti-headphone"></i> Computer <span class="fa fa-angle-down"></span></a>
+                                                    <ul class="cr-menu-desktop-none">
+                                                        <li class="cr-sub-dropdown sub-style"><a href="#">Accessories <i class="fa fa-angle-down"></i></a>
+                                                            <ul>
+                                                                <li><a href="shop-fullwide.html">Sophisticated</a></li>
+                                                                <li><a href="shop-fullwide.html">Artsy Fashion</a></li>
+                                                                <li><a href="shop-fullwide.html">Preppy Fashion</a></li>
+                                                                <li><a href="shop-fullwide.html">Casual Fashion</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="cr-sub-dropdown sub-style"><a href="#">Sophisticated <i class="fa fa-angle-down"></i></a>
+                                                            <ul>
+                                                                <li><a href="shop-fullwide.html">Chic Fashion</a></li>
+                                                                <li><a href="shop-fullwide.html">Casual Fashion</a></li>
+                                                                <li><a href="shop-fullwide.html">Artsy Fashion</a></li>
+                                                                <li><a href="shop-fullwide.html">Preppy Fashion</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="cr-sub-dropdown sub-style"><a href="#">Artsy Fashion <i class="fa fa-angle-down"></i></a>
+                                                            <ul>
+                                                                <li><a href="shop-fullwide.html">Casual Fashion</a></li>
+                                                                <li><a href="shop-fullwide.html">Preppy Fashion</a></li>
+                                                                <li><a href="shop-fullwide.html">Chic Fashion</a></li>
+                                                                <li><a href="shop-fullwide.html">Casual Fashion</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="cr-dropdown"><a href="#"><i class="ti-gift"></i> Accessories <span class="fa fa-angle-down"></span></a>
+                                                    <ul class="cr-menu-desktop-none">
+                                                        <li class="cr-sub-dropdown sub-style"><a href="#">Casual Fashion <i class="fa fa-angle-down"></i></a>
+                                                            <ul>
+                                                                <li><a href="shop-fullwide.html">Preppy Fashion</a></li>
+                                                                <li><a href="shop-fullwide.html">Artsy Fashion</a></li>
+                                                                <li><a href="shop-fullwide.html">Chic Fashion</a></li>
+                                                                <li><a href="shop-fullwide.html">Preppy Fashion</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="cr-sub-dropdown sub-style"><a href="#">Preppy Fashion <i class="fa fa-angle-down"></i></a>
+                                                            <ul>
+                                                                <li><a href="shop-fullwide.html">Preppy Fashion</a></li>
+                                                                <li><a href="shop-fullwide.html">Artsy Fashion</a></li>
+                                                                <li><a href="shop-fullwide.html">Chic Fashion</a></li>
+                                                                <li><a href="shop-fullwide.html">Casual Fashion</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="cr-dropdown"><a href="shop-fullwide.html"><i class="ti-basketball"></i> Laptops</a></li>
+                                                <li class="cr-dropdown"><a href="shop-fullwide.html"><i class="ti-cloud-up"></i> Smart Phones</a></li>
+                                                <li class="cr-dropdown"><a href="shop-fullwide.html"><i class="ti-agenda"></i> Headphones </a></li>
+                                                <li class="cr-dropdown"><a href="shop-fullwide.html"><i class="ti-game"></i> Speakers</a></li>
+                                                <li class="cr-dropdown"><a href="shop-fullwide.html"><i class="ti-tablet"></i> Smart TVs</a></li>
+                                                <li class="cr-dropdown"><a href="shop-fullwide.html"><i class="ti-mobile"></i> Watch</a></li>
+                                                <li class="cr-dropdown"><a href="shop-fullwide.html"><i class="ti-world"></i> Tablet</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- Clickable Slider -->
+            <div class="clickalbe-sidebar-wrapper-active clickalbe-sidebar-wrapper-style-1">
+                <div class="clickalbe-sidebar-wrap clickalbe-sidebar-padding-dec">
+                    <a class="sidebar-close"><i class=" ti-close "></i></a>
+                    <div class="header-aside-content sidebar-content-100-percent">
+                        <div class="header-aside-menu">
+                            <nav>
+                                <ul>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Help Center</a></li>
+                                    <li><a href="#">Collection</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">New Look</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <p>Sed ut perspiciatis unde omnis iste natus voluptatem accusantium doloremque laudanti totam aperiam inventore veritatis congue tristique ultrices. Purus finibus dapibus nunc neque commodo tellusin dapi magna quam posuere.</p>
+                        <div class="aside-contact-info">
+                            <ul>
+                                <li><i class="fa fa-phone"></i>Phone: (+62) 123-321-543</li>
+                                <li><i class="fa fa-envelope"></i>Email: info@example.com</li>
+                                <li><i class="fa fa-map-marker"></i>Location: 121 King Street, New York 3000 USA.</li>                              
+                            </ul>
+                        </div>
+                        <div class="social-icon-style-2 mb-25">
+                            <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                            <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                            <a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a>
+                            <a class="behance" href="#"><i class="fa fa-behance"></i></a>
+                        </div>
+                        <div class="copyright copyright-gray-2">
+                            <p>Copyright © 2022 <a href="#">Orange.</a> All rights reserved.</p>                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- mini cart start -->
+            <div class="sidebar-cart-active">
+                <div class="sidebar-cart-all">
+                    <a class="cart-close" href="#"><i class=" ti-close "></i></a>
+                    <div class="cart-content">
+                        <h3>Shopping Cart</h3>
+                        <ul>
+                            <li class="single-product-cart">
+                                <div class="cart-img">
+                                    <a href="#"><img src="assets/images/cart/cart-1.jpg" alt=""></a>
+                                </div>
+                                <div class="cart-title">
+                                    <h4><a href="#">Awesome Mobile</a></h4>
+                                    <span> 1 × $49.00	</span>
+                                </div>
+                                <div class="cart-delete">
+                                    <a href="#">×</a>
+                                </div>
+                            </li>
+                            <li class="single-product-cart">
+                                <div class="cart-img">
+                                    <a href="#"><img src="assets/images/cart/cart-2.jpg" alt=""></a>
+                                </div>
+                                <div class="cart-title">
+                                    <h4><a href="#">Nice Headphones</a></h4>
+                                    <span> 1 × $49.00	</span>
+                                </div>
+                                <div class="cart-delete">
+                                    <a href="#">×</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="cart-total">
+                            <h4>Subtotal: <span>$170.00</span></h4>
+                        </div>
+                        <div class="cart-checkout-btn">
+                            <a class="btn-hover cart-btn-style" href="cart.html">view cart</a>
+                            <a class="no-mrg btn-hover cart-btn-style" href="checkout.html">checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile menu start -->
+            <div class="mobile-menu-active clickalbe-sidebar-wrapper-style-1">
+                <div class="clickalbe-sidebar-wrap">
+                    <a class="sidebar-close"><i class=" ti-close "></i></a>
+                    <div class="mobile-menu-content-area sidebar-content-100-percent">
+                        <div class="mobile-search">
+                            <form class="search-form" action="#">
+                                <input type="text" placeholder="Search entire store…">
+                                <button class="button-search"><i class=" ti-search "></i></button>
+                            </form>
+                        </div>
+                        <div class="clickable-mainmenu-wrap clickable-mainmenu-style1 mb-30">
+                            <nav>
+                                <ul>
+                                    <li class="has-sub-menu"><a>Home</a>
+                                        <ul class="sub-menu-2">
+                                            <li><a href="index.html">home-fashion</a></li>
+                                            <li><a href="home-shoes.html">home-shoes</a></li>
+                                            <li><a href="home-bag.html">home-bag</a></li> 
+                                            <li><a href="home-hotel.html">home-hotel</a></li> 
+                                            <li><a href="home-music.html">home-music</a></li> 
+                                            <li><a href="home-socks.html">home-socks</a></li>
+                                            <li><a href="home-fruit.html">home-fruit</a></li> 
+                                            <li><a href="home-kitchen.html">home-kitchen</a></li> 
+                                            <li><a href="home-art.html">home-art</a></li> 
+                                            <li><a href="home-bicycle.html">home-bicycle</a></li> 
+                                        </ul>
+                                    </li>
+                                    <li class="has-sub-menu"><a href="#">Pages</a>
+                                        <ul class="sub-menu-2">
+                                            <li><a href="about-us.html">About Us</a></li>
+                                            <li><a href="contact.html">Contact Page</a></li>
+                                            <li><a href="404.html">404 Page</a></li>
+                                            <li><a href="faq.html">FAQ</a></li>
+                                            <li><a href="coming-soon.html">Comming Soon</a></li>
+                                            <li><a href="empty-cart.html">Empty Cart</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-sub-menu"><a href="#">shop</a>
+                                        <ul class="sub-menu-2">
+                                            <li class="has-sub-menu"><a href="#">Shop Layout</a>
+                                                <ul class="sub-menu-2">
+                                                    <li><a href="shop-fullwide.html">Shop Fullwidth</a></li>
+                                                    <li><a href="shop-sidebar.html">Shop Sidebar</a></li>
+                                                    <li><a href="shop-3-col.html">Shop 03 Columns</a></li>
+                                                    <li><a href="shop-list-style.html">Shop List Style</a></li>
+                                                    <li><a href="order-tracking.html">Order Tracking</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-sub-menu"><a href="#">Product Layout</a>
+                                                <ul class="sub-menu-2">
+                                                    <li><a href="product-details.html">Single 01</a></li>
+                                                    <li><a href="product-details-group.html">Grouped</a></li>
+                                                    <li><a href="product-details-sticky.html">Sticky Info</a></li>
+                                                    <li><a href="product-details-video.html">Video</a></li>
+                                                    <li><a href="product-details-affiliate.html">Affiliate</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-sub-menu"><a href="#">Shop Page</a>
+                                                <ul class="sub-menu-2">
+                                                    <li><a href="my-account.html">My Account</a></li>
+                                                    <li><a href="checkout.html">Check Out</a></li>
+                                                    <li><a href="cart.html">Shopping Cart</a></li>
+                                                    <li><a href="wishlist.html">Wishlist</a></li>                                                  
+                                                    <li><a href="login-register.html">login / register</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-sub-menu"><a href="#">Blog</a>
+                                        <ul class="sub-menu-2">
+                                            <li><a href="blog.html">Blog Page</a></li>
+                                            <li><a href="blog-no-sidebar.html">Blog No sidebar</a></li>
+                                            <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
+                                            <li><a href="blog-details.html">Blog Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>               
+                        <div class="header-aside-content">                        
+                            <p>Pellentesque mollis nec orci id tincidunt. Sed mollis risus eu nisi aliquet, sit amet fermentum.</p>
+                            <div class="aside-contact-info">
+                                <ul>
+                                    <li><i class="fa fa-phone"></i>Phone: (+62) 123-321-543</li>
+                                    <li><i class="fa fa-envelope"></i>Email: info@example.com</li>
+                                    <li><i class="fa fa-map-marker"></i>Location: 121 King Street, New York 3000 USA.</li>
+                                </ul>
+                            </div>
+                            <div class="social-icon-style-2 mb-25">
+                                <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                <a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a>
+                                <a class="behance" href="#"><i class="fa fa-behance"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slider -->
+            <div class="slider-area">
+                <div class="container-fluid p-0">
+                    <div class="row g-0">
+                        <div class="main-slider-active-1 owl-carousel slider-nav-position-2 slider-nav-style-2">
+                            <div class="single-main-slider slider-animated-2 bg-img bicycle-slider slider-height-2" data-overlay="dark">
+                                <div class="container-fluid height-100-percent">
+                                    <div class="col-12 row g-0 p-lg-0">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-6 bicycle-img">
+                                            <a href="#">
+                                                <img src="assets/images/slider/slider-01.png" alt="">
+                                            </a>
+                                            <span class="animated">new</span>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                            <div class="main-slider-content-2 text-left">                                          
+                                                <h1 class="animated">Mach City 7 bicycle</h1>							
+                                                <div class="module-wrap">
+                                                    <ul>
+                                                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">17t, 21t frame height</a></li>								
+                                                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">26t wheel size</a></li>
+                                                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">7 speed transmission</a></li>
+                                                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Paved road</a></li>  
+                                                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Light weight steel frame</a></li>
+                                                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Steel rigid fork</a></li>                                                          
+                                                    </ul>                                  
+                                                </div>
+                                                <div class="btn-style-3 btn-hover-2">
+                                                    <span>$ 1,500</span>							
+                                                    <a class="animated bs3-black-text bs3-btn-bg bs3-ptb bs3-ptb ptb-2-white-hover" href="product-details.html">shop now</a>
+                                                </div>               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-main-slider slider-animated-2 bg-img bicycle-slider slider-height-2" data-overlay="dark">
+                                <div class="container-fluid height-100-percent">
+                                    <div class="col-12 row g-0 p-lg-0">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-6 bicycle-img">
+                                            <a href="#">
+                                                <img src="assets/images/slider/slider-02.png" alt="">
+                                            </a>
+                                            <span class="animated">new</span>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                            <div class="main-slider-content-2 text-left">                                          
+                                                <h1 class="animated">Top quality, factory price</h1>							
+                                                <div class="module-wrap">
+                                                    <ul>
+                                                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">17t, 21t frame height</a></li>								
+                                                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">26t wheel size</a></li>
+                                                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">7 speed transmission</a></li>
+                                                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Paved road</a></li>  
+                                                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Light weight steel frame</a></li>
+                                                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Steel rigid fork</a></li>                                                          
+                                                    </ul>                                  
+                                                </div>
+                                                <div class="btn-style-3 btn-hover-2">
+                                                    <span>$ 1,800</span>							
+                                                    <a class="animated bs3-black-text bs3-btn-bg bs3-ptb bs3-ptb ptb-2-white-hover" href="product-details.html">shop now</a>
+                                                </div>               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-main-slider slider-animated-2 bg-img bicycle-slider slider-height-2" data-overlay="dark">
+                                <div class="container-fluid height-100-percent">
+                                    <div class="col-12 row g-0 p-lg-0">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-6 bicycle-img">
+                                            <a href="#">
+                                                <img src="assets/images/slider/slider-03.png" alt="">
+                                            </a>
+                                            <span class="animated">new</span>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                            <div class="main-slider-content-2 text-left">                                          
+                                                <h1 class="animated">Bike Bell</h1>							
+                                                <div class="module-wrap">
+                                                    <ul>
+                                                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">17t, 21t frame height</a></li>								
+                                                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">26t wheel size</a></li>
+                                                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">7 speed transmission</a></li>
+                                                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Paved road</a></li>  
+                                                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Light weight steel frame</a></li>
+                                                        <li><i class="fa fa-check" aria-hidden="true"></i><a href="#">Steel rigid fork</a></li>                                                          
+                                                    </ul>                                  
+                                                </div>
+                                                <div class="btn-style-3 btn-hover-2">
+                                                    <span>$ 1,200</span>							
+                                                    <a class="animated bs3-black-text bs3-btn-bg bs3-ptb bs3-ptb ptb-2-white-hover" href="product-details.html">shop now</a>
+                                                </div>               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Services -->
+            <div class="service-bicycle-area">
+                <div class="container-fluid">                  
+                    <div class="row align-items-center">                     
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 border-service">
+                            <div class="service-wrap">
+                                <a href="#">
+                                    <img src="assets/images/service/bicycle.png" alt="">
+                                </a>
+                                <div class="service-content">
+                                    <h3>Saddle Personal Fitting</h3>
+                                    <p>Individual saddle fitting according to your height and weight.</p>
+                                    <div class="services-button">
+                                        <a href="#" class="button-button-simple">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 border-service">
+                            <div class="service-wrap">
+                                <a href="#">
+                                    <img src="assets/images/service/helmet.png" alt="">
+                                </a>
+                                <div class="service-content">
+                                    <h3>Spare Parts Exchange</h3>
+                                    <p>Have spare parts and want to sell or exchange them? Come and see!</p>
+                                    <div class="services-button">
+                                        <a href="#" class="button-button-simple">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                            <div class="subscribe-wrap">                                                              
+                                <h2>Subscribe to our newsletter about new products</h2>                                                                                            
+                                <div id="Subscribe" class="subscribe-form-2">
+                                    <form id="Subscribe">
+                                        <div id="Subscribe" class="mc-form-2">
+                                            <input type="email" required="" placeholder="Your email address..." name="EMAIL" value="">                                          
+                                            <div class="clear-2">
+                                                <input id="Subscribe" class="button" type="submit" name="subscribe" value="Subscribe now">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Tab Products -->
+            <div class="product-area product-padding bg-bicycle">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title">                          
+                            <h2>Discover<br>our new arrivals</h2>
+                        </div>
+                    </div>
+                </div>           
+                <div class="container-fluid">   
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">                                                                                                      
+                            <div class="product-wrap">
+                                <div class="product-img pro-theme-color-border">
+                                    <div class="product-action product-action-position-1 pro-action-theme-color">
+                                        <a title="Add to Cart" href="#"><i class="fa fa-shopping-bag"></i></a>
+                                        <a title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>                                          
+                                        <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
+                                    </div>
+                                    <a href="product-details.html">
+                                        <img src="assets/images/product/01.png" alt="">
+                                    </a>
+                                    <span class="badge-green badge-ptb-1">New</span>
+                                </div>
+                                <div class="product-content mt-25"> 
+                                    <div class="title">
+                                        <a class="product-cat">ROAD BICYCLES</a>
+                                        <a class="Wishlist" title="Add to Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="new-price">$512.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">                                                                                                      
+                            <div class="product-wrap">
+                                <div class="product-img pro-theme-color-border">
+                                    <div class="product-action product-action-position-1 pro-action-theme-color">
+                                        <a title="Add to Cart" href="#"><i class="fa fa-shopping-bag"></i></a>
+                                        <a title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>                                          
+                                        <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
+                                    </div>
+                                    <a href="product-details.html">
+                                        <img src="assets/images/product/02.png" alt="">
+                                    </a>                                      
+                                </div>
+                                <div class="product-content mt-25"> 
+                                    <div class="title">
+                                        <a class="product-cat">Men's BICYCLES</a>
+                                        <a class="Wishlist" title="Add to Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="new-price">$100.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">                                                                                                      
+                            <div class="product-wrap">
+                                <div class="product-img pro-theme-color-border">
+                                    <div class="product-action product-action-position-1 pro-action-theme-color">
+                                        <a title="Add to Cart" href="#"><i class="fa fa-shopping-bag"></i></a>
+                                        <a title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>                                          
+                                        <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
+                                    </div>
+                                    <a href="product-details.html">
+                                        <img src="assets/images/product/03.png" alt="">
+                                    </a>
+                                    <span class="badge-green badge-ptb-1">sale</span>
+                                </div>
+                                <div class="product-content mt-25"> 
+                                    <div class="title">
+                                        <a class="product-cat">E-Bikes BICYCLES</a>
+                                        <a class="Wishlist" title="Add to Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="new-price">$125.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">                                                                                                      
+                            <div class="product-wrap">
+                                <div class="product-img pro-theme-color-border">
+                                    <div class="product-action product-action-position-1 pro-action-theme-color">
+                                        <a title="Add to Cart" href="#"><i class="fa fa-shopping-bag"></i></a>
+                                        <a title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>                                          
+                                        <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
+                                    </div>
+                                    <a href="product-details.html">
+                                        <img src="assets/images/product/04.png" alt="">
+                                    </a>                                     
+                                </div>
+                                <div class="product-content mt-25"> 
+                                    <div class="title">
+                                        <a class="product-cat">Ladies' BICYCLES</a>
+                                        <a class="Wishlist" title="Add to Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="new-price">$59.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-style-3 btn-hover-2">
+                            <a class="animated bs3-black-text bs3-btn-bg bs3-ptb bs3-ptb ptb-2-white-hover" href="product-details.html">View other products</a>
+                        </div>
+                    </div>      
+                </div>              
+            </div>       
+            <!-- banner area -->
+            <div class="banner-bicycle-area">
+                <div class="container-fluid p-0">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-12 col-12 p-0">                           
+                            <div class="banner-content">
+                                <a href="#">
+                                    <img src="assets/images/banner/banner-bicycle.jpg" alt="banner-bicycle">
+                                </a>
+                                <div class="banner-info">
+                                    <h2>Get -20% for all BMX bikes & accessories</h2>
+                                    <div class="btn-style-3 btn-hover-2">
+                                        <a class="animated bs3-black-text bs3-btn-bg bs3-ptb bs3-ptb ptb-2-white-hover" href="product-details.html">Get your promocode</a>
+                                    </div>
+                                </div>
+                            </div>                          
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 p-0">
+                            <div class="service-wrap">
+                                <a href="#">
+                                    <img src="assets/images/service/screwdriver.png" alt="">
+                                </a>
+                                <div class="service-content">
+                                    <h3>Bicycle Repair Workshop</h3>
+                                    <p>Bicycle restoration after collisions of any severity, including complete rebuilding.</p>
+                                    <div class="services-button">
+                                        <a href="#" class="button-button-simple">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 bg-main2 p-0">
+                            <div class="service-wrap">
+                                <a href="#">
+                                    <img src="assets/images/service/gear.png" alt="">
+                                </a>
+                                <div class="service-content">
+                                    <h3 style="color: #fff">Bicycle Repair Workshop</h3>
+                                    <p style="color: #A3B4B7">Bicycle restoration after collisions of any severity, including complete rebuilding.</p>
+                                    <div class="services-button">
+                                        <a href="#" class="button-button-simple hover-btn">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+            <!-- Our bestsellers -->
+            <div class="product-area product-padding bg-bicycle">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title">                          
+                            <h2>Our bestsellers</h2>
+                        </div>
+                    </div>
+                </div>           
+                <div class="container-fluid">   
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">                                                                                                      
+                            <div class="product-wrap mb-30">
+                                <div class="product-img pro-theme-color-border">
+                                    <div class="product-action product-action-position-1 pro-action-theme-color">
+                                        <a title="Add to Cart" href="#"><i class="fa fa-shopping-bag"></i></a>
+                                        <a title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>                                          
+                                        <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
+                                    </div>
+                                    <a href="product-details.html">
+                                        <img src="assets/images/product/05.png" alt="">
+                                    </a>
+                                    <span class="badge-green badge-ptb-1">New</span>
+                                </div>
+                                <div class="product-content mt-25"> 
+                                    <div class="title">
+                                        <a class="product-cat">ROAD BICYCLES</a>
+                                        <a class="Wishlist" title="Add to Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="new-price">$512.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">                                                                                                      
+                            <div class="product-wrap mb-30">
+                                <div class="product-img pro-theme-color-border">
+                                    <div class="product-action product-action-position-1 pro-action-theme-color">
+                                        <a title="Add to Cart" href="#"><i class="fa fa-shopping-bag"></i></a>
+                                        <a title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>                                          
+                                        <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
+                                    </div>
+                                    <a href="product-details.html">
+                                        <img src="assets/images/product/09.png" alt="">
+                                    </a>                                      
+                                </div>
+                                <div class="product-content mt-25"> 
+                                    <div class="title">
+                                        <a class="product-cat">Men's BICYCLES</a>
+                                        <a class="Wishlist" title="Add to Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="new-price">$100.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">                                                                                                      
+                            <div class="product-wrap mb-30">
+                                <div class="product-img pro-theme-color-border">
+                                    <div class="product-action product-action-position-1 pro-action-theme-color">
+                                        <a title="Add to Cart" href="#"><i class="fa fa-shopping-bag"></i></a>
+                                        <a title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>                                          
+                                        <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
+                                    </div>
+                                    <a href="product-details.html">
+                                        <img src="assets/images/product/06.png" alt="">
+                                    </a>
+                                    <span class="badge-green badge-ptb-1">sale</span>
+                                </div>
+                                <div class="product-content mt-25"> 
+                                    <div class="title">
+                                        <a class="product-cat">E-Bikes BICYCLES</a>
+                                        <a class="Wishlist" title="Add to Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="new-price">$125.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">                                                                                                      
+                            <div class="product-wrap mb-30">
+                                <div class="product-img pro-theme-color-border">
+                                    <div class="product-action product-action-position-1 pro-action-theme-color">
+                                        <a title="Add to Cart" href="#"><i class="fa fa-shopping-bag"></i></a>
+                                        <a title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>                                          
+                                        <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
+                                    </div>
+                                    <a href="product-details.html">
+                                        <img src="assets/images/product/10.png" alt="">
+                                    </a>                                     
+                                </div>
+                                <div class="product-content mt-25"> 
+                                    <div class="title">
+                                        <a class="product-cat">Ladies' BICYCLES</a>
+                                        <a class="Wishlist" title="Add to Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="new-price">$59.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                      
+                    </div>     
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">                                                                                                      
+                            <div class="product-wrap">
+                                <div class="product-img pro-theme-color-border">
+                                    <div class="product-action product-action-position-1 pro-action-theme-color">
+                                        <a title="Add to Cart" href="#"><i class="fa fa-shopping-bag"></i></a>
+                                        <a title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>                                          
+                                        <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
+                                    </div>
+                                    <a href="product-details.html">
+                                        <img src="assets/images/product/11.png" alt="">
+                                    </a>
+                                    <span class="badge-green badge-ptb-1">New</span>
+                                </div>
+                                <div class="product-content mt-25"> 
+                                    <div class="title">
+                                        <a class="product-cat">ROAD BICYCLES</a>
+                                        <a class="Wishlist" title="Add to Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="new-price">$512.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">                                                                                                      
+                            <div class="product-wrap">
+                                <div class="product-img pro-theme-color-border">
+                                    <div class="product-action product-action-position-1 pro-action-theme-color">
+                                        <a title="Add to Cart" href="#"><i class="fa fa-shopping-bag"></i></a>
+                                        <a title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>                                          
+                                        <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
+                                    </div>
+                                    <a href="product-details.html">
+                                        <img src="assets/images/product/07.png" alt="">
+                                    </a>                                      
+                                </div>
+                                <div class="product-content mt-25"> 
+                                    <div class="title">
+                                        <a class="product-cat">Men's BICYCLES</a>
+                                        <a class="Wishlist" title="Add to Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="new-price">$100.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">                                                                                                      
+                            <div class="product-wrap">
+                                <div class="product-img pro-theme-color-border">
+                                    <div class="product-action product-action-position-1 pro-action-theme-color">
+                                        <a title="Add to Cart" href="#"><i class="fa fa-shopping-bag"></i></a>
+                                        <a title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>                                          
+                                        <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
+                                    </div>
+                                    <a href="product-details.html">
+                                        <img src="assets/images/product/12.png" alt="">
+                                    </a>
+                                    <span class="badge-green badge-ptb-1">sale</span>
+                                </div>
+                                <div class="product-content mt-25"> 
+                                    <div class="title">
+                                        <a class="product-cat">E-Bikes BICYCLES</a>
+                                        <a class="Wishlist" title="Add to Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="new-price">$125.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">                                                                                                      
+                            <div class="product-wrap">
+                                <div class="product-img pro-theme-color-border">
+                                    <div class="product-action product-action-position-1 pro-action-theme-color">
+                                        <a title="Add to Cart" href="#"><i class="fa fa-shopping-bag"></i></a>
+                                        <a title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>                                          
+                                        <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
+                                    </div>
+                                    <a href="product-details.html">
+                                        <img src="assets/images/product/08.png" alt="">
+                                    </a>                                     
+                                </div>
+                                <div class="product-content mt-25"> 
+                                    <div class="title">
+                                        <a class="product-cat">Ladies' BICYCLES</a>
+                                        <a class="Wishlist" title="Add to Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="new-price">$59.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-style-3 btn-hover-2">
+                            <a class="animated bs3-black-text bs3-btn-bg bs3-ptb bs3-ptb ptb-2-white-hover" href="product-details.html">View other products</a>
+                        </div>
+                    </div>    
+                </div>              
+            </div>    
+            <!-- Brand Slider -->
+            <div class="brand-logo-area bg-main2">
+                <div class="container">
+                    <div class="row align-items-center"> 
+                        <div class="col-sm-12">
+                            <div class="brand-logo-active owl-carousel">
+                                <div class="single-brand-logo">
+                                    <img src="assets/images/brand-logo/bicycle-01.png" alt="">
+                                </div>
+                                <div class="single-brand-logo">
+                                    <img src="assets/images/brand-logo/bicycle-02.png" alt="">
+                                </div>
+                                <div class="single-brand-logo">
+                                    <img src="assets/images/brand-logo/bicycle-03.png" alt="">
+                                </div>
+                                <div class="single-brand-logo">
+                                    <img src="assets/images/brand-logo/bicycle-04.png" alt="">
+                                </div>
+                                <div class="single-brand-logo">
+                                    <img src="assets/images/brand-logo/bicycle-05.png" alt="">
+                                </div>
+                                <div class="single-brand-logo">
+                                    <img src="assets/images/brand-logo/bicycle-06.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial -->
+            <div class="testimonial-area bg-bicycle m-0">
+                <div class="container-fluid">
+                    <div class="section-title">                    
+                        <h2>What our clients say</h2>                               
+                    </div>
+                    <div class="row">
+                        <div class="testimonial-active owl-carousel">
+                            <div class="single-testimonial">                             
+                                <div class="testimonial-quote">                                    
+                                    <div class="client-img">
+                                        <img src="assets/images/testimonial/client-1.png" alt="testimonial">                                       
+                                    </div>
+                                    <div class="profile-info">
+                                        <strong class="profile-name">Fred Rodriquez</strong>
+                                        <p>Mountain Bike Athlete</p>
+                                    </div>
+                                </div>
+                                <div class="client-info">                                                                       
+                                    <p>I just want to thank you all for organizing such a spectacular and memorable event. It was the best bicycle competition so far, and I am really looking forward to the series next year. See you!</p>              
+                                </div>
+                                <div class="product-rating">
+                                    <i class="fa fa-star checked"></i>
+                                    <i class="fa fa-star checked"></i>
+                                    <i class="fa fa-star checked"></i>
+                                    <i class="fa fa-star checked"></i>
+                                    <i class="fa fa-star-half-o checked" aria-hidden="true"></i>
+                                </div>                            
+                            </div>
+                            <div class="single-testimonial"> 
+                                <div class="testimonial-quote">                                  
+                                    <div class="client-img">
+                                        <img src="assets/images/testimonial/client-2.png" alt="testimonial">
+                                    </div>
+                                    <div class="profile-info">
+                                        <strong class="profile-name">Byron Mccarthy</strong>
+                                        <p>Bicycle Racer</p>
+                                    </div>
+                                </div>
+                                <div class="client-info">                                  
+                                    <p>The whole experience was absolutely amazing. Thank you to the team for the perfect organization of the event. It was a great first bicycle race experience for me and I really look forward to next years’ competitions.</p>                                  
+                                </div>
+                                <div class="product-rating">
+                                    <i class="fa fa-star checked"></i>
+                                    <i class="fa fa-star checked"></i>
+                                    <i class="fa fa-star checked"></i>
+                                    <i class="fa fa-star checked"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                </div>                                
+                            </div>
+                            <div class="single-testimonial"> 
+                                <div class="testimonial-quote">
+                                    <div class="client-img">
+                                        <img src="assets/images/testimonial/client-3.png" alt="testimonial">
+                                    </div>
+                                    <div class="profile-info">
+                                        <strong class="profile-name">Bennett Miller</strong>
+                                        <p>Goweser</p>
+                                    </div>
+                                </div>
+                                <div class="client-info">                                  
+                                    <p>I would like to say thank you to the whole team of organizers for the perfect event. It was the best sport competition I’ve ever attended and I am really looking forward to the series next year. Good luck!</p>                                  
+                                </div>
+                                <div class="product-rating">
+                                    <i class="fa fa-star checked"></i>
+                                    <i class="fa fa-star checked"></i>
+                                    <i class="fa fa-star checked"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                </div>                              
+                            </div>
+                            <div class="single-testimonial"> 
+                                <div class="testimonial-quote col-lg-12 col-12">
+                                    <div class="client-img">
+                                        <img src="assets/images/testimonial/client-4.jpg" alt="testimonial">
+                                    </div>
+                                    <div class="profile-info">
+                                        <strong class="profile-name">Derek Larson</strong>
+                                        <p>BMX Athlete</p>
+                                    </div>
+                                </div>
+                                <div class="client-info">                                  
+                                    <p>I would like to say thank you to the whole team of organizers for the perfect event. It was the best sport competition I’ve ever attended and I am really looking forward to the series next year. Good luck!</p>                                  
+                                </div>
+                                <div class="product-rating">
+                                    <i class="fa fa-star checked"></i>
+                                    <i class="fa fa-star checked"></i>
+                                    <i class="fa fa-star checked"></i>
+                                    <i class="fa fa-star checked"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                </div>                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>         
+            <!-- blog -->
+            <div class="blog-area m-0">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="section-title">                           
+                            <h2>news & Article</h2>                               
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="blog-item">
+                                <div class="blog-img">
+                                    <a href="#">
+                                        <img src="assets/images/blog/e-blog-1.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog-text clearfix">
+                                    <hr class="line"></hr>
+                                    <h3>Lights &amp; Motion Night Light</h3>
+                                    <p><span>17 dec </span></p>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form... </p>
+                                    <div class="btn-style-3 btn-hover-2">
+                                        <a class="animated bs3-black-text bs3-btn-bg bs3-ptb bs3-ptb ptb-2-white-hover" href="product-details.html">View More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="blog-item">
+                                <div class=" middel">
+                                    <hr class="line"></hr>
+                                    <h3>Lights &amp; Motion Night Light</h3>
+                                    <p><span>15 dec </span></p>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form... </p>
+                                    <div class="btn-style-3 btn-hover-2">
+                                        <a class="animated bs3-black-text bs3-btn-bg bs3-ptb bs3-ptb ptb-2-white-hover" href="product-details.html">View More</a>
+                                    </div>
+                                </div>
+                                <div class="blog-img">
+                                    <a href="#">
+                                        <img src="assets/images/blog/e-blog-2.jpg" alt="">
+                                    </a>
+                                </div>                              
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="blog-item">
+                                <div class="blog-img">
+                                    <a href="#">
+                                        <img src="assets/images/blog/e-blog-3.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog-text clearfix">
+                                    <hr class="line"></hr>
+                                    <h3>Lights &amp; Motion Night Light</h3>
+                                    <p><span>16 dec </span></p>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form... </p>
+                                    <div class="btn-style-3 btn-hover-2">
+                                        <a class="animated bs3-black-text bs3-btn-bg bs3-ptb bs3-ptb ptb-2-white-hover" href="product-details.html">View More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                               
+                    </div>
+                </div>
+            </div>  
+            <!-- Free test ride -->
+            <div class="test-area m-0">
+                <div class="container-fluid">
+                    <div class="row">  
+                        <div class="container">                          
+                            <div class="test-box">
+                                <div class="test-column">
+                                    <div class="test-content">                                 
+                                        <h2 class="main-title">Free test ride</h2>                                                                                                             
+                                    </div>                              
+                                    <div class="btn-style-3 btn-hover-2">
+                                        <a class="animated bs3-black-text bs3-btn-bg bs3-ptb bs3-ptb ptb-2-white-hover" href="product-details.html">Book Now</a>
+                                    </div>
+                                </div>                                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer -->
+            <footer class="footer-area bg-main2">
+                <div class="container">
+                    <div class="row align-items-top">
+                        <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+                            <div class="footer-widget">
+                                <div class="footer-logo">
+                                    <a href="index.html">
+                                        <img src="assets/images/logo/logo-white.png" alt="logo">
+                                    </a>
+                                </div>
+                                <p>Orange convallis bibendum urna ut viverra. Maecenas quis consequat libero, a feugiat eros. Nunc ut lacinia tortor Orange ultricies laoreet ullamcorper.</p>
+                                <div class="profile-icon">
+                                    <h3 class="footer-title">Social Media</h3>
+                                    <ul class="ekit-team-social-list">
+                                        <li>
+                                            <a>
+                                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>                                  
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-12">
+                            <div class="col-12 footer">
+                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                    <div class="footer-widget">
+                                        <h3 class="footer-title">Want to call with us?</h3>
+                                        <div class="icon-box">
+                                            <div class="icon">
+                                                <i class="fa fa-phone"></i>
+                                            </div>
+                                            <div class="icon-box-content">
+                                                <h4 class="icon-box-title">
+                                                    <span>Phone</span>
+                                                </h4>
+                                                <p class="icon-box-description">(+62) 123-321-543</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                    <div class="footer-widget">
+                                        <h3 class="footer-title">Want to email with us?</h3>
+                                        <div class="icon-box">
+                                            <div class="icon">
+                                                <i class="fa fa-envelope"></i>
+                                            </div>
+                                            <div class="icon-box-content">
+                                                <h4 class="icon-box-title">
+                                                    <span>Email</span>
+                                                </h4>
+                                                <p class="icon-box-description">info@example.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                    <div class="footer-widget">
+                                        <h3 class="footer-title">Want to visit us?</h3>
+                                        <div class="icon-box">
+                                            <div class="icon">
+                                                <i class="lni lni-map-marker"></i>
+                                            </div>
+                                            <div class="icon-box-content">
+                                                <h4 class="icon-box-title">
+                                                    <span>Location</span>
+                                                </h4>
+                                                <p class="icon-box-description">121 King Street, New York 3000 USA.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12  footer-01">
+                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                    <div class="footer-widget">
+                                        <h3 class="footer-title">Quick Links</h3>
+                                        <div class="footer-info-list">
+                                            <ul>
+                                                <li><i class="fa fa-chevron-right"></i><a href="#">About</a></li>
+                                                <li><i class="fa fa-chevron-right"></i><a href="#">Sitemap</a></li>
+                                                <li><i class="fa fa-chevron-right"></i><a href="#">Blog</a></li>
+                                                <li><i class="fa fa-chevron-right"></i><a href="#">Contact</a></li>                                         
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                    <div class="footer-widget">
+                                        <h3 class="footer-title">Customer Service</h3>
+                                        <div class="footer-info-list">
+                                            <ul>
+                                                <li><i class="fa fa-chevron-right"></i><a href="#">Privacy Policy</a></li>
+                                                <li><i class="fa fa-chevron-right"></i><a href="#">Terms & Conditions</a></li>
+                                                <li><i class="fa fa-chevron-right"></i><a href="#">Support</a></li>
+                                                <li><i class="fa fa-chevron-right"></i><a href="#">Disclaimer</a></li>                                            
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                    <div class="footer-widget">
+                                        <h3 class="footer-title">Our Shop</h3>
+                                        <div class="footer-info-list">
+                                            <ul>
+                                                <li><i class="fa fa-chevron-right"></i><a href="#">Bikes & Parts</a></li>
+                                                <li><i class="fa fa-chevron-right"></i><a href="#">Clothing</a></li>
+                                                <li><i class="fa fa-chevron-right"></i><a href="#">Bikes For Rent</a></li>
+                                                <li><i class="fa fa-chevron-right"></i><a href="#">Booking Form</a></li>                                            
+                                            </ul>
+                                        </div>                                                                                  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                                                                                                
+                <div class="footer-bottom-bicycle-area">                   
+                    <div class="container">
+                        <div class="row align-items-center"> 
+                            <div class="footer-bottom">                                                         
+                                <div class="footer-bottom-info">
+                                    <p>Orange Bike & Cycling Template Kit by miotheme.</p>
+                                </div>
+                                <div class="footer-bottom-text">                                     
+                                    <p>Copyright © 2022. All rights reserved.</p>
+                                </div>                                                         
+                            </div>
+                        </div>
+                    </div>
+                </div>                                       
+            </footer>
+            <!-- Newsletter Popup -->
+            <div class="newsletter_form_wrapper">
+                <div class="newsletter_form_inner">
+                    <div class="close_modal">
+                        <i class="ti-close"></i>
+                    </div>
+                    <div class="newsletter_form_thumb"></div>
+                    <div class="newsletter_form text-center">
+                        <h3>Newsletter</h3>
+                        <p>Join over 1,000 people who get free &amp; fresh content 
+                            delivered each time we publish.</p>
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-12">
+                                    <input placeholder="Enter e-mail address" class="primary_input3 mb_10" type="text">
+                                </div>
+                                <div class="col-12">
+                                    <div class="btn-style-3 btn-hover-2">
+                                        <a class="animated bs3-black-text bs3-btn-bg bs3-ptb bs3-ptb bs3-border-radius ptb-2-white-hover" href="#">Subscribe Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class=" ti-close " aria-hidden="true"></span></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row no-gutters">
+                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="quickview-slider-active owl-carousel">
+                                        <a class="img-popup" href="assets/images/product/quickview-1.png"><img src="assets/images/product/quickview-1.png" alt=""></a>
+                                        <a class="img-popup" href="assets/images/product/quickview-2.png"><img src="assets/images/product/quickview-2.png" alt=""></a>
+                                    </div>
+                                    <!-- Thumbnail Large Image End -->
+                                </div>
+                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="product-details-content quickview-content-padding bg-gray">
+                                        <h2 class="uppercase">JAW SHARK WOMEN T-SHIRT</h2>
+                                        <h3>$19.99</h3>
+                                        <div class="product-details-peragraph">
+                                            <p>Sed ligula sapien, fermentum id est eget, viverra auctor sem. Vivamus maximus enim vitae urna porta, ut euismod nibh lacinia. Pellentesque at diam sed libero tincidunt feugiat.</p>
+                                        </div>
+                                        <div class="product-details-action-wrap">
+                                            <div class="product-details-quality">
+                                                <div class="cart-plus-minus">
+                                                    <input class="cart-plus-minus-box" type="text" name="qtybutton" value="2">
+                                                </div>
+                                            </div>
+                                            <div class="product-details-cart">
+                                                <a title="Add to cart" href="#">Add to cart</a>
+                                            </div>
+                                            <div class="product-details-wishlist">
+                                                <a title="Add to wishlist" href="#"><i class="ti-heart"></i></a>
+                                            </div>
+                                            <div class="product-details-compare">
+                                                <a title="Add to compare" href="#"><i class="ti-reload"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-details-meta">
+                                            <span>SKU: N/A</span>
+                                            <span>Categories: <a href="#">Woman</a>, <a href="#">Dress</a>, <a href="#">Style</a>, <a href="#">T-Shirt</a>, <a href="#">Mango</a></span>
+                                            <span>Tag: <a href="#">Fashion</a>, <a href="#">Dress</a> </span>
+                                            <span>Product ID: <a href="#">274</a></span>
+                                        </div>
+                                        <div class="product-details-info">
+                                            <a href="#"><i class=" ti-location-pin "></i>Check Store availability</a>
+                                            <a href="#"><i class=" ti-shopping-cart "></i>Delivery and Return</a>
+                                            <a href="#"><i class="ti-pin"></i>Ask a Question</a>
+                                        </div>
+                                        <div class="product-details-social-wrap">
+                                            <span>SHARE THIS PRODUCT</span>
+                                            <div class="product-details-social">
+                                                <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                                <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                                <a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a>
+                                                <a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal end -->
         </div>
-      </form>
-      <p>
-        Look at that! A Hello World app! This greeting is stored on the NEAR blockchain. Check it out:
-      </p>
-      <ol>
-        <li>
-          Look in <code>index.js</code> and <code>near-api.js</code> – you'll see <code>get_greeting</code>
-          and <code>set_greeting</code> being called on <code>contract</code>.
-          What's this?
-        </li>
-        <li>
-          Ultimately, this <code>contract</code> code is defined in
-          <code>assembly/index.ts</code> – this is the source code for your
-          <a target="_blank" href="https://docs.near.org/docs/develop/contracts/overview">smart contract</a>.
-        </li>
-        <li>
-          When you run <code>npm run dev</code>, the code in
-          <code>assembly/index.ts</code> gets deployed to the NEAR testnet. You
-          can see how this happens by looking in <code>package.json</code> at the
-          <code>scripts</code> section to find the <code>dev</code> command.
-        </li>
-      </ol>
-      <hr>
-      <p>
-        To keep learning, check out
-        <a target="_blank" href="https://docs.near.org">the NEAR docs</a>
-        or look through some
-        <a target="_blank" href="https://examples.near.org">example apps</a>.
-      </p>
-    </main>
-  </div>
 
-  <script src="index.js" type="module"></script>
-</body>
+        <!-- All JS is here
+        ============================================ -->
+
+        <!-- Modernizer JS -->
+        <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+        <!-- jquery -->
+        <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
+        <!-- Popper JS -->
+        <script src="assets/js/vendor/popper.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/plugins/owl-carousel.js"></script>
+        <script src="assets/js/plugins/slick.js"></script>
+        <script src="assets/js/plugins/jquery.mb.ytplayer.min.js"></script>
+        <script src="assets/js/plugins/magnific-popup.js"></script>
+        <script src="assets/js/plugins/wow.js"></script>
+        <script src="assets/js/plugins/instafeed.js"></script>
+        <script src="assets/js/plugins/countdown.js"></script>
+        <script src="assets/js/plugins/jarallax.min.js"></script>
+        <script src="assets/js/plugins/images-loaded.js"></script>
+        <script src="assets/js/plugins/isotope.js"></script>
+        <script src="assets/js/plugins/tilt.js"></script>
+        <script src="assets/js/plugins/jquery-ui.js"></script>
+        <script src="assets/js/plugins/jquery-ui-touch-punch.js"></script>
+        <script src="assets/js/plugins/easyzoom.js"></script>
+        <script src="assets/js/plugins/resizesensor.js"></script>
+        <script src="assets/js/plugins/sticky-sidebar.js"></script>
+        <script src="assets/js/plugins/scrollup.js"></script>
+        <script src="assets/js/plugins/ajax-mail.js"></script>
+        <!-- Main JS -->
+        <script src="assets/js/main.js"></script>
+
+    </body>
+
 </html>

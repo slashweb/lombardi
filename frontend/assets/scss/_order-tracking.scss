@@ -1,0 +1,57 @@
+/*-------- 25. Order tracking style ---------*/
+
+.order-tracking-content {
+    p {
+        line-height: 24px;
+        margin: 0 auto;
+        text-align: center;
+        width: 86%;
+        color: #2f2f2f;
+    }
+    .order-tracking-form {
+        margin: 30px 0 0;
+        .sin-order-tracking {
+            margin: 0 0 36px;
+            label {
+                color: #2f2f2f;
+                font-weight: bold;
+                margin: 0 0 10px;
+            }
+            input {
+                background: transparent;
+                border: 1px solid #cecece;
+                height: 62px;
+                padding: 10px 20px;
+                color: #2f2f2f;
+                font-size: 14px;
+                &:focus {
+                    border: 1px solid #262626;
+                }
+                @media #{$xs-layout} {
+                    height: 50px;
+                }
+            }
+        }
+        .order-track-btn {
+            text-align: center;
+            a {
+                display: block;              
+                color: var(--white);
+                background-color:  var(--colormain);
+                border: 1px solid var(--colormain);
+                line-height: 1;
+                padding: 18px 50px;
+                text-transform: uppercase;
+                font-family: var(--fonttitle);
+                &:hover {
+                    color: var(--colormain);
+                    background-color:  var(--white);
+                    border: 1px solid var(--colormain);
+                }
+            }
+        }
+    }
+}
+
+
+

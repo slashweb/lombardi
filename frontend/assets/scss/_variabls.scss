@@ -1,0 +1,117 @@
+// Font Family
+$font-main: 'Jost', sans-serif;
+$font-title: 'Jost', sans-serif;
+$font-music: 'Poppins', sans-serif;
+$font-bag: 'Montserrat', sans-serif;
+$font-shoes: 'Rouge Script', cursive;
+$font-shoes2: 'Lexend Deca', sans-serif;
+$font-fruit: 'PT Sans', sans-serif;
+$font-art: 'Raleway', sans-serif;
+$font-art2: 'Josefin Sans', sans-serif;
+$font-fashion: 'Work Sans', sans-serif;
+$font-fashion1: 'Gilda Display', serif;
+$font-socks: 'Montserrat', sans-serif;
+$font-kitchen: 'Poppins', sans-serif;
+$font-kitchen2: 'Roboto', sans-serif;
+$font-hotel: 'Raleway', sans-serif;
+$font-hotel1: 'Open Sans', sans-serif;
+$font-hotel2: 'Titillium Web', sans-serif;
+$font-bicycle: 'Noto Sans', sans-serif;
+$font-bicycle2: 'Montserrat Alternates', sans-serif;
+$rufina: 'Jost', sans-serif;
+
+
+// text Colors ---------------
+$white: #ffffff;
+$black: #000000;
+$black2: #222222;
+$black3: #888888;
+$black4: #777777;
+$grey: #f8f8f8;
+$grey2: #CDCDCD;
+
+// Theme Color
+$theme-color-main: #df453e;
+$theme-color-main2: #335154;
+$theme-color-bicycle: #f1f2f2;
+$theme-color-music: #8183A6;
+$theme-color-music2: #BCA3BF;
+$theme-color-music3: #101e45;
+$theme-color-bag: #f7f7f7;
+$theme-color-bag2: #3E536E;
+$theme-color-shoes: #F2C6BA;
+$theme-color-shoes2: #8C0D06;
+$theme-color-fruit: #707072;
+$theme-color-fruitbg: #FFDB00;
+$theme-color-fruitbg2: #07060b;
+$theme-color-art: #04ADBF;
+$theme-color-fashion: #3D6973;
+$theme-color-socks: #fab639;
+$theme-color-socks2: #13755c;
+$theme-color-kitchen: #41484E;
+$theme-color-kitchen2: #d5ac63;
+$body-bg : #FFFAF3; 
+
+// Responsive Variables 
+$xxl-layout : 'only screen and (max-width: 1600px)';
+$xx-layout : 'only screen and (min-width: 1366px) and (max-width: 1600px)';
+$xl-layout : 'only screen and (min-width: 1200px) and (max-width: 1365px)';
+$lg-layout : 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$lg2-layout : 'only screen and (min-width: 1024px) and (max-width: 1024px)';
+$md-layout:'only screen and (min-width: 768px) and (max-width: 991px)';
+$xs-layout:'only screen and (max-width: 767px)';
+$sm-layout: 'only screen and (min-width: 576px) and (max-width: 767px)';
+$ms-layout:'only screen and (max-width: 540px)';
+$mss-layout:'only screen and (max-width: 480px)';
+$msss-layout:'only screen and (max-width: 320px)';
+
+
+:root {
+    --fontprimary: #{$font-main};
+    --fonttitle: #{$font-title};
+    --fontmusic: #{$font-music};
+    --fontbag: #{$font-bag};
+    --fontshoes: #{$font-shoes};
+    --fontshoes2: #{$font-shoes2};
+    --fontfruit: #{$font-fruit};
+    --fontart: #{$font-art};
+    --fontart2: #{$font-art2};
+    --fontfashion: #{$font-fashion};
+    --fontfashion1: #{$font-fashion1};
+    --fontsocks: #{$font-socks}; 
+    --fontkitchen: #{$font-kitchen}; 
+    --fontkitchen2: #{$font-kitchen2}; 
+    --fonthotel: #{$font-hotel};
+    --fonthotel1: #{$font-hotel1};
+    --fonthotel2: #{$font-hotel2};
+    --fontbicycle: #{$font-bicycle};
+    --fontbicycle2: #{$font-bicycle2};
+    --rufina: #{$rufina};
+    --white: #{$white};
+    --black: #{$black};
+    --black2: #{$black2};
+    --black3: #{$black3};
+    --black4: #{$black4};
+    --grey: #{$grey};
+    --grey2: #{$grey2};
+    --colormain: #{$theme-color-main};
+    --colormain2: #{$theme-color-main2};  
+    --colorbicycle: #{$theme-color-bicycle};
+    --colormusic: #{$theme-color-music};
+    --colormusic2: #{$theme-color-music2};
+    --colormusic3: #{$theme-color-music3};
+    --colorbag: #{$theme-color-bag};
+    --colorbag2: #{$theme-color-bag2};
+    --colorshoes: #{$theme-color-shoes};
+    --colorshoes2: #{$theme-color-shoes2};
+    --colorfruitbg2: #{$theme-color-fruitbg2};
+    --colorfruit: #{$theme-color-fruit};
+    --colorfruitbg: #{$theme-color-fruitbg};
+    --colorart: #{$theme-color-art};
+    --colorfashion: #{$theme-color-fashion};
+    --colorsocks: #{$theme-color-socks};
+    --colorsocks2: #{$theme-color-socks2};
+    --colorkitchen: #{$theme-color-kitchen};
+    --colorkitchen2: #{$theme-color-kitchen2};
+    --bodybg: #{$body-bg};
+}

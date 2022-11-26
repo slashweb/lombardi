@@ -1,0 +1,119 @@
+/*-------- 29. Coming soon style ---------*/
+
+.comming-soon-area {
+    @media #{$xs-layout} {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+    }
+    .logo{
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+}
+
+.comming-soon-content {
+    @media #{$xs-layout} {
+        padding: 0 15px;
+    }
+    h2 {
+        font-size: 80px;
+        color: var(--white);
+        line-height: 1;
+        margin-bottom: 20px;
+        padding: 0;       
+        @media #{$xx-layout} {
+            font-size: 60px;
+        }
+        @media #{$xl-layout} {
+            font-size: 60px;
+        }
+        @media #{$lg-layout} {
+            font-size: 60px;
+        }
+        @media #{$md-layout} {
+            font-size: 50px;
+        }
+        @media #{$xs-layout} {
+            font-size: 32px;
+        }
+        @media #{$sm-layout} {
+            font-size: 40px;
+        }
+    }
+    p{
+        margin-bottom: 0;
+    }
+    .comming-soon-timer {
+        margin: 60px 0;
+        @media #{$lg-layout} {
+            margin: 40px 0;
+        }
+        @media #{$md-layout} {
+            margin: 40px 0;
+        }
+        @media #{$xs-layout} {
+            margin: 30px 0;
+        }
+        div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            > span {
+                color: var(--colormain);
+                padding: 20px;
+                border: 1px solid;
+                margin-right: 15px;               
+                @media #{$md-layout} {
+                    margin-right: 15px;  
+                }
+                @media #{$xs-layout} {
+                    margin-right: 10px;  
+                    padding: 10px;
+                }
+                > span {
+                    font-size: 32px;
+                    @media #{$md-layout} {
+                        font-size: 28px;
+                    }
+                    @media #{$xs-layout} {
+                        font-size: 26px;
+                    }
+                }
+                > p {
+                    color: var(--white);
+                    font-size: 18px;
+                    margin: 7px 0 0;
+                    @media #{$md-layout} {
+                        margin: 5px 0 0;
+                    }
+                    @media #{$xs-layout} {
+                        font-size: 16px;
+                        margin: 5px 0 0;
+                    }
+                }
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    .btn-style-3{
+        a{
+            @media #{$msss-layout} {
+                margin-bottom: 15px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+

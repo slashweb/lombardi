@@ -1,0 +1,69 @@
+/*-------- 14. Brand logo style ---------*/
+.brand-logo-area{
+    padding: 40px 0;
+    .single-brand-logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        filter: opacity(0.8);
+        cursor: pointer;
+        img{
+            display: inline-block;
+            width: auto;
+            transition: all .3s ease 0s;
+        }
+        &:hover{
+            filter: opacity(1);
+        }
+    }
+}
+.brand-logo-fruit{
+    background-color: var(--black);
+    .single-brand-logo{
+        img{
+            width: auto;
+        }
+    }
+}
+/*--- kitchen ---*/
+.brand-kitchen-area{   
+    .custom-heading{
+        font-family: var(--fontkitchen);
+        line-height: 50px;
+        font-weight: 600;    
+        font-size: 40px;
+        margin: 10px 0;
+        padding: 0;
+        text-transform: none;
+        letter-spacing: 0;
+        @media #{$lg-layout} {          
+            font-size: 36px;
+            line-height: 46px;                
+        }
+        @media #{$md-layout} {          
+            font-size: 36px;
+            line-height: 46px;                
+        }
+        @media #{$xs-layout} {          
+            font-size: 30px;
+            line-height: 40px; 
+            text-align: center;
+        }
+    }
+    .brand-kitchen-img{
+        border-left-width: 1px;
+        padding-left: 28px;
+        border-left-color: #f2f2f2;
+        border-left-style: solid;
+        @media #{$xs-layout} {          
+            border-left-style: none;
+            padding-left: 0px;
+            text-align: center;
+        }
+    }
+}
+
+
+
+
+
