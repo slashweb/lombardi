@@ -18,6 +18,8 @@ window.onload = async () => {
   }
 
   getGreeting();
+
+  createNewProduct()
 };
 
 // Button clicks
@@ -25,6 +27,9 @@ document.querySelector('form').onsubmit = setGreeting;
 document.querySelector('#sign-in-button').onclick = () => { wallet.signIn(); };
 document.querySelector('#sign-out-button').onclick = () => { wallet.signOut(); };
 
+async function createNewProduct()  {
+  wallet.callMethod({ method: 'create_new_product', 'name', 'description', 123, 'owner'})
+}
 async function setGreeting(event) {
   // handle UI
   event.preventDefault();

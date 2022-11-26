@@ -1,30 +1,27 @@
 // Find all our documentation at https://docs.near.org
-import { NearBindgen, near, call, view } from 'near-sdk-js';
+import {NearBindgen, near, call, view, Vector} from 'near-sdk-js';
+
+import { Product } from "./Schemas";
 
 @NearBindgen({})
 class HelloNear {
-  message: string = "OMG";
-
-  @view({}) // This method is read-only and can be called for free
-  get_greeting(): string {
-    return this.message;
-  }
-
-  @view({}) // This method is read-only and can be called for free
-  get_my_products(): number[] {
-    return [1,2,3,4,5,6]; 
-  }
-
-
-  @call({}) // This method changes the state, for which it cost gas
-  set_greeting({ message }: { message: string }): void {
-    near.log(`Saving greeting ${message}`);
-    this.message = message;
-  }
+  products: Vector<Product> = new Vector<Product>('v-uid');
 
   @call({}) // This method changes the state, for which it cost gas
   make_offer({ product, id_offer, propose }: { product: object, id_offer: string, propose: object }): void {
     near.log(`Saving greeting ${id_offer}`);
+  }
+
+  @view({})
+  // Returns an array of messages.
+  get_products({ from_index = 0, limit = 10 }: { from_index: number, limit: number }): Product[] {
+    return this.products.toArray().slice(from_index, from_index + limit);
+  }
+
+  @call({})
+  create_new_product() : void {
+    const product: Product = { name: 'MyName', description: 'MyDesc', owner: 'MyOwner', price: 123, product_id: 'JHASBD'};
+    this.products.push(product)
   }
 
 }
